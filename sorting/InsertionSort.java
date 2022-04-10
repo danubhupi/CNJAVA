@@ -28,13 +28,13 @@ int pos;
 		
 	}
 	
-	public static void print(int [] ar) {
-		
-		for(int i:ar) {
-			System.out.println(i);
+		public static void print(int [] ar) {
+			
+			for(int i:ar) {
+				System.out.println(i);
+			}
+			
 		}
-		
-	}
 
 	public static void main(String[] args) {
 		
