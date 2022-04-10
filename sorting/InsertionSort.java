@@ -1,12 +1,10 @@
 package sorting;
 
 public class InsertionSort {
-
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+	
+	public static void IS(int[] ar) {
 		
-		int []ar= {9,7,6,10,11,3};
-		int pos;
+int pos;
 		
 		
 		for(int i=1;i<ar.length;i++) {
@@ -15,23 +13,39 @@ public class InsertionSort {
 			{
 				pos--;
 				}
-////			if(pos<0) {pos++;}
-//			int temp1=ar[i],temp;
-//			for(int j=pos;j<i;j++) {
-//				temp=ar[j+1];
-//				ar[j+1]=ar[j];
-//				ar[j]=temp;
-//				
-//			}
-//			
-//			ar[pos]=temp1;
+
+			int temp1=ar[i];
+			for(int j=i;j>=pos && j>0;j--) {
+				ar[j]=ar[j-1];
 			
-			System.out.println(pos);
+				
+			}
+			
+			ar[pos]=temp1;
+			
+
 		}
 		
-//		for(int i:ar) {
-//			System.out.println(i);
-//		}
+	}
+	
+	public static void print(int [] ar) {
+		
+		for(int i:ar) {
+			System.out.println(i);
+		}
+		
+	}
+
+	public static void main(String[] args) {
+		
+		
+		int []ar= {9,7,6,10,11,3,0,12,11,-0};
+		
+		IS(ar);
+		print(ar);
+		
+		
+		
 
 	}
 
