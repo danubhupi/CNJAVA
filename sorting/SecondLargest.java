@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class SecondLargest {
 	
 	public static int SL(int []ar) {
-		int ind=0;
+		int ind=0,res=-2147483648;
 		for(int i=0;i<ar.length-1;i++) {
 			int cur=ar[i];
 			ind =i;
@@ -13,28 +13,21 @@ public class SecondLargest {
 				if(ar[j]>cur) {
 					cur=ar[j];
 					ind=j;
-				}
-				if(ind!=i) {
-					int temp=ar[i];
-					ar[i]=ar[ind];
-					ar[ind]=temp;
-				}
-				
+				}			
 				
 			}
-		}
-		int i=1;
-		int res=ar[0];
-		for(;i<ar.length;i++) {
-			if(ar[i]!=res) {
+			if(ind!=i) {
+				int temp=ar[i];
+				ar[i]=ar[ind];
+				ar[ind]=temp;
+				
+			}
+			if(i>0 && ar[i]!=ar[i-1]) {
 				res=ar[i];
 				break;
 			}
-			
 		}
-		if(i==ar.length) {
-			res=-2147483648;
-		}
+
 		return res;
 	}
 
