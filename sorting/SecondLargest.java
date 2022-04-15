@@ -30,6 +30,24 @@ public class SecondLargest {
 
 		return res;
 	}
+	
+	public static int SLCN(int[] ar) {
+		 int largest=ar[0],secondL=Integer.MIN_VALUE;
+		 
+		 for(int i=1;i<ar.length;i++) {
+			 if(largest<ar[i]) {
+				 secondL=largest;
+				 largest=ar[i];
+				 
+			 }
+			 else if(secondL<ar[i]&& largest!=ar[i]) {
+				 secondL=ar[i];
+			 }
+			 
+		 }
+		
+		return secondL;
+	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -43,7 +61,8 @@ public class SecondLargest {
 			for(int i=0;i<n ;i++) {
 				ar[i]=sc.nextInt();
 			}
-			System.out.println(SL(ar));
+			System.out.println(SLCN(ar));
+			sc.close();
 
 	}
 
