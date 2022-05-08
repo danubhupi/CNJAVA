@@ -6,6 +6,7 @@ class Main {
 
   public static int num0(int num,int total){
     if(Math.abs(num)<10){
+      if(num==0){total++;}
       return total;
     }
     if(num%10==0){
