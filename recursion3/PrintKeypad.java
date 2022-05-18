@@ -45,7 +45,10 @@ public class PrintKeypad {
 	}
 	
 	
-	
+	public static void printKeypad(String num) {
+		helper(num,"");
+		
+	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
