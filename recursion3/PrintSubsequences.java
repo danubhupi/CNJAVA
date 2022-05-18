@@ -12,7 +12,7 @@ public class PrintSubsequences {
 		printSubSeq(input.substring(1),output);
 		printSubSeq(input.substring(1),output+input.charAt(0));
 		return;
-		
+	
 	}
 	
 	public static void printSubSeq(String input) {
