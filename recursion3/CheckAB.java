@@ -27,16 +27,16 @@ public class CheckAB {
 		}
 	
 		
-		
-		if(s.substring(index,index+2)=="bb") {
-			if(index+2>=s.length()) {
-				return true;
-			}
-			else if(s.charAt(index+2)=='a') {
-				return checkAB(s,index+2);
-			}
-			else return false;
-		}
+//		
+//		if(s.substring(index,index+2)=="bb") {
+//			if(index+2>=s.length()) {
+//				return true;
+//			}
+//			else if(s.charAt(index+2)=='a') {
+//				return checkAB(s,index+2);
+//			}
+//			else return false;
+//		}
 		
 		return false;
 		
