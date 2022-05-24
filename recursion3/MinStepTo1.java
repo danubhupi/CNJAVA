@@ -3,6 +3,7 @@ package recursion3;
 public class MinStepTo1 {
 	
 	public static int min(int n) {
+		
 		if(n==1) {
 			return 0;
 		}
@@ -11,11 +12,11 @@ public class MinStepTo1 {
 		}
 		
 		if(n%2==0) {
-			return Math.min(1+min(n-1),min(n/2)+1);
+			return 1+ Math.min(min(n-1),min(n/2));
 		}
 		
 		else if(n%3==0) {
-		return Math.min(1+min(n-1),1+min(n/3));
+		return 1+Math.min(min(n-1),min(n/3));
 		}
 		else
 			return 1+min(n-1);
@@ -25,7 +26,7 @@ public class MinStepTo1 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		System.out.println(min(7));
+		System.out.println(+min(11));
 
 	}
 
