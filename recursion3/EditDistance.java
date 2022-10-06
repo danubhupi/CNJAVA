@@ -83,9 +83,9 @@ public class EditDistance {
 		String s1temp=sc.nextLine();
 //		sc.next();
 		String s2temp=sc.nextLine();
-		StringBuilder s1=new StringBuilder(s1temp);
-		StringBuilder s2=new StringBuilder(s2temp);
+		
 		 System.out.println(ed(s1temp,s2temp));
+		 sc.close();
 		
 
 	}
